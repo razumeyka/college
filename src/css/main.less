@@ -1,4 +1,7 @@
 @import "parts/jquery.fancybox.min.css";
+@import "parts/header.less";
+@import "parts/slider.less";
+@import "parts/cards.less";
 
 @font-face {
   font-family: 'Helvetica';
@@ -35,12 +38,11 @@
   font-style: italic;
 }
 
-html { overflow-x: hidden; }
-
 body{
-	margin:0;
+    background: #f5f5f5;
+    margin:0;
 	padding: 0;
-	font-family: 'PTSans', sans-serif;
+	font-family: "Helvetica", sans-serif;
 	font-size: 15px;
     font-weight: 400;
 	line-height:1.4;
@@ -50,7 +52,7 @@ body{
 }
 
 button,input,select,textarea{
-    font-family:'PTSans'; 
+    font-family:"Helvetica"; 
     font-size: 17px;
 }
 
@@ -78,7 +80,79 @@ p {
     justify-content: space-between;
 }
 
-/*slider*/
+.info-block {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 0px rgba(35, 31, 32, 0.25);
+}
+
+.info {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 30px 0 30px 50px;
+}
+
+.caption {
+    font: 700 30px "Helvetica";
+}
+
+.button {
+    display:inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.button_green {
+    background: rgba(0, 79, 53, 0);
+    border: 2px solid rgb(0, 128, 85);
+    max-width: 343px;
+    height: 58px;
+    font: 500 16px/58px "Helvetica";
+    color: rgb(0, 78, 52);
+    text-transform: uppercase;
+}
+
+.caption-small {
+    font: 700 28px "Helvetica";
+    text-align: center;
+}
+
+.photos {
+    margin: 0 -25px;
+}
+
+.photos__photo {
+    box-sizing: border-box;
+    width: 33.3333%;
+    padding: 0 25px;
+}
+
+.photos__photo-1 {
+    background: url(../images/history-1.jpg) no-repeat center;
+}
+
+.photos__photo-2 {
+    background: url(../images/history-2.jpg) no-repeat center;
+}
+
+.photos__photo-3 {
+    background: url(../images/history-3.jpg) no-repeat center;
+}
+
+.footer1 {
+    background:#d7d7d7;
+}
+
+.footer2 {
+    background:#000000;
+    overflow: hidden;
+}
+
+
 
 
 

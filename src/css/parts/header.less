@@ -1,0 +1,114 @@
+/*header*/
+
+header {
+    box-sizing: border-box;
+    box-shadow: 0px 0px 6px 0px rgba(35, 31, 32, 0.4);
+    position: relative;
+}
+
+.header1 {
+    background: url(../images/header-bg.jpg) no-repeat center;
+}
+
+.header1 .wrapper {
+    position: relative;   
+}
+
+.logo {
+    display: block;
+    background: url(../images/logo.svg) no-repeat center;
+    width: 200px;
+    height: 260px;
+    position: absolute;
+    top: 0;
+    left: 40px;
+}
+
+.institute__name {
+    font: 700 24px "Helvetica";
+    margin: auto 0;
+    padding-left: 230px;
+    max-width: 300px;
+}
+
+.contacts__column {
+    display: inline-block;
+    margin: auto 0;
+    font-size: 18px;
+    letter-spacing: 0.1px;
+    max-width: 300px;
+}
+
+.contacts__line {
+    background: rgb(0, 0, 0);
+    width: 2px;
+    height: 123px;
+    margin: auto 30px;
+}
+
+.contacts__number {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header2 {
+    background: #000000;
+    height: 60px;
+}
+
+.menu {
+    display: block;
+    padding: 0;
+    margin: 0 0 0 230px;
+}
+
+.menu li {
+    list-style: none;
+    float: left;
+    position: relative;
+}
+
+.menu a {
+    display: inline-block;   
+    font-size: 18px;;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px 18px;
+}
+
+.menu>li:first-child a {
+    padding: 20px 18px 20px 0;
+}
+
+.sub-menu {
+    display: none;
+    background: #07006b;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    z-index: 1001;
+}
+
+.sub-menu.active {
+    display: block;
+}
+
+.sub-menu li {
+    position: relative;
+}
+
+.sub-menu li a {
+    position: relative;
+    font-size: 18px;;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+}

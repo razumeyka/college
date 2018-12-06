@@ -1,0 +1,25 @@
+/*slider*/
+
+.slider {
+    position:relative;
+    width: 50%;
+    height:400px;
+}
+
+.slider .slide{
+    width: 100%;
+    height: 100%;
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0;
+	transition:opacity 0.3s linear 0s;
+}
+
+.slider .slide.active{
+	opacity:1;
+}
+
+.slider .controls {
+    display: none;
+}

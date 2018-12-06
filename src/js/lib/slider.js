@@ -9,7 +9,7 @@ function setSlide($slider,index){
 	});
 	$slider.find('.slide').removeClass('active');
 	$slider.find('.controls li').removeClass('active');
-	$slider.find('.slide').eq(index).addClass('active').css({'display':'block', 'background-size':'auto 110%'});
+	$slider.find('.slide').eq(index).addClass('active').css({'display':'block'});
 	$slider.find('.controls li').eq(index).addClass('active');
 }
 function nextslide($slider){
@@ -24,7 +24,7 @@ function initSlider($slider){
 	$slider.find('.slide').first().addClass('active');
 	$slider.find('.controls li').first().addClass('active');
 	$slider.find('.slide').each(function(index){
-		$(this).css({'background':'url("'+$(this).data('background')+'")', 'background-position':'center', 'background-size':'auto 100%'});
+		$(this).css({'background':'url("'+$(this).data('background')+'")', 'background-position':'center', 'background-size':'cover'});
 	});
 	$slider.find('.controls li').click(function(){
 		clearInterval(timer);
