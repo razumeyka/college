@@ -51,11 +51,15 @@ button,input,select,textarea{
     font-size: 17px;
 }
 
+h1,h2,h3,h4,h5 {
+    margin: 0;
+}
+
 p {
     font-size: 18px;
     letter-spacing: 0.5px;
-    line-height: 1.35;
-    margin: 22px 0;
+    line-height: 1.5;
+    margin: 25px 0;
 }
 
 .wrapper {
@@ -82,7 +86,7 @@ p {
     text-decoration: none;
     outline: none;
     text-align: center;
-    padding: 0 20px;
+    padding: 0 35px;
 }
 
 .button_green {
@@ -101,16 +105,16 @@ p {
     height: 48px;
     font: 500 16px/48px "Helvetica";
     color: rgb(0, 0, 0);
-    padding-left: 50px;
+    padding: 0 30px 0 55px;
     position: relative;
 }
 
 .button_icon::before {
     content: "";
-    background: url('/images/sprites.svg') no-repeat -283px -10px;
-	width: 25px;
-	height: 24px;
+    background: url(/images/sprites.svg) no-repeat -280px -7px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 7px;
 }

@@ -62,28 +62,43 @@ gulp.task('js:build', function () {
 			basepath: '@file'
 		})) //Прогоним через rigger
         .pipe(sourcemaps.init()) //Инициализируем sourcemap
-        .pipe(uglify()) //Сожмем наш js
+//        .pipe(uglify()) //Сожмем наш js
         .pipe(sourcemaps.write()) //Пропишем карты
         .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
         .pipe(reload({stream: true})); //И перезагрузим сервер
+});
+gulp.task('js:buildnosource', function () {
+   return gulp.src(path.src.js) //Найдем наш main файл
+        .pipe(fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		})) //Прогоним через rigger
+        .pipe(uglify()) //Сожмем наш js
+        .pipe(gulp.dest(path.build.js)); //Выплюнем готовый файл в build
 });
 
 gulp.task('css:build', function(){
   return gulp.src(path.src.style)
 	.pipe(sourcemaps.init())
     .pipe(less())
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+	.pipe(cleanCSS({compatibility: 'ie8'}))
 	.pipe(sourcemaps.write())
     .pipe(gulp.dest('build/css'))
     .pipe(reload({stream: true})); //И перезагрузим сервер
 });
-
+gulp.task('css:buildnosource', function(){
+  return gulp.src(path.src.style)
+    .pipe(less())
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('build/css'));
+});
 gulp.task('static:build', function() {
     gulp.src(path.src.fonts).pipe(gulp.dest(path.build.fonts))
 	return gulp.src(path.src.images).pipe(gulp.dest(path.build.images))
 });
 
 gulp.task('build',gulp.series('html:build', 'js:build','css:build', 'static:build'));
+gulp.task('deploy',gulp.series('html:build', 'js:buildnosource','css:buildnosource', 'static:build'));
 gulp.task('watch', function(){
     watch([path.watch.html], gulp.series('html:build'))
     watch([path.watch.css], gulp.series('css:build'))

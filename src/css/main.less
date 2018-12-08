@@ -4,40 +4,30 @@
 @import "parts/slider.less";
 @import "parts/cards.less";
 
-.info-block {
+.slider-block {
     width: 100%;
+    box-sizing: border-box;
     background: rgb(255, 255, 255);
     box-shadow: 0px 0px 5px 0px rgba(35, 31, 32, 0.25);
 }
 
-.info {
+.text {
     box-sizing: border-box;
-    width: 50%;
-    padding: 30px 0 30px 50px;
+    width: 52.5%;
+    padding: 40px 55px 50px;
 }
 
 .caption {
     font: 700 30px "Helvetica";
+    line-height: 1.35;
+    letter-spacing: 1px;
 }
 
-.button {
-    display:inline-block;
+.info-block {
     box-sizing: border-box;
-    cursor: pointer;
-    text-decoration: none;
-    outline: none;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.button_green {
-    background: rgba(0, 79, 53, 0);
-    border: 2px solid rgb(0, 128, 85);
-    max-width: 343px;
-    height: 58px;
-    font: 500 16px/58px "Helvetica";
-    color: rgb(0, 78, 52);
-    text-transform: uppercase;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px 0px rgba(35, 31, 32, 0.25);
+    padding: 45px 60px 50px;
 }
 
 .caption-small {
@@ -46,13 +36,16 @@
 }
 
 .photos {
+    display: flex;
+    flex-wrap: nowrap;
     margin: 0 -25px;
 }
 
 .photos__photo {
     box-sizing: border-box;
     width: 33.3333%;
-    padding: 0 25px;
+    height: 407px;
+    margin: 0 25px;
 }
 
 .photos__photo-1 {
@@ -67,8 +60,28 @@
     background: url(../images/history-3.jpg) no-repeat center;
 }
 
+.info-block .button {
+    display: block;
+    margin: 30px auto 0;
+    width: calc(33.3333% - 35px);
+}
+
+.info-block .button.more-info_active {
+    display: none;
+}
+
+footer {
+    margin-top: 90px;
+}
+
 .footer1 {
     background:#d7d7d7;
+    padding: 18px 0 14px;
+}
+
+.copyright {
+    font-size: 18px;
+    margin-top: 20px;
 }
 
 .footer2 {
@@ -76,9 +89,17 @@
     overflow: hidden;
 }
 
+.footer2 .menu {
+    padding: 0;
+}
 
+.footer2 .menu>li a {
+    padding: 18px 15px;
+}
 
-
+.footer2 .menu>li:first-child a {
+    padding: 18px 15px 18px 0;
+}
 
 
 /*media*/

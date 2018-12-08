@@ -30,4 +30,12 @@ $(document).ready(function(){
 		if(window.innerWidth>1279)return ;
         $('.sub-menu ul').not($(this).closest('li').find(' ul')).not($(this).closest('li').closest('ul')).slideUp('300');	$(this).closest('li').find('ul:first').slideToggle('300');
     });
+
+// hidden text
+    $(".second_part").slideUp(0);
+    $(".more-info").click(function(event){
+        event.preventDefault();
+        $('.second_part').slideDown(500);
+		$('.more-info').toggleClass('more-info_active');
+    });
 }); 
