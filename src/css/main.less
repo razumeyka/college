@@ -30,9 +30,12 @@
     padding: 45px 60px 50px;
 }
 
+.info-block__caption-small {
+    text-align: center;
+}
+
 .caption-small {
     font: 700 28px "Helvetica";
-    text-align: center;
 }
 
 .photos {
@@ -44,26 +47,22 @@
 .photos__photo {
     box-sizing: border-box;
     width: 33.3333%;
-    height: 407px;
     margin: 0 25px;
 }
 
-.photos__photo-1 {
-    background: url(../images/history-1.jpg) no-repeat center;
+.photos__photo img {
+    width: 100%;
 }
 
-.photos__photo-2 {
-    background: url(../images/history-2.jpg) no-repeat center;
+.info-block__second-part p:last-child{ 
+    margin-bottom: 0; 
 }
 
-.photos__photo-3 {
-    background: url(../images/history-3.jpg) no-repeat center;
-}
-
-.info-block .button {
+.info-block__button {
     display: block;
     margin: 30px auto 0;
     width: calc(33.3333% - 35px);
+    min-width: 240px;
 }
 
 .info-block .button.more-info_active {
@@ -79,7 +78,11 @@ footer {
     padding: 18px 0 14px;
 }
 
-.copyright {
+.footer1 .wrapper {
+    height: 123px;
+}
+
+.footer1__copyright {
     font-size: 18px;
     margin-top: 20px;
 }
@@ -91,14 +94,16 @@ footer {
 
 .footer2 .menu {
     padding: 0;
+    height: 50px;
 }
 
 .footer2 .menu>li a {
-    padding: 18px 15px;
+    line-height: 50px;
+    padding: 0 15px;
 }
 
 .footer2 .menu>li:first-child a {
-    padding: 18px 15px 18px 0;
+    padding-left: 0;
 }
 
 
@@ -118,14 +123,51 @@ footer {
     }
 }
 
-@media screen and (max-width: 1023px) {
-
+@media screen and (max-width: 1023px) {   
+    .slider-block {
+        flex-direction: column;
+    }
+    
+    .text {
+        width: 100%;
+    }
+    
+    .cards__card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .footer1 .wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .contacts__column {
+        margin: 15px 0;
+    }
+    
+    .footer2 {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 767px) {
-
+    
+    .info-block {
+        padding: 40px 30px;
+    }
+    
+    .photos {
+        margin: 0 -10px;
+    }
+    
+    .photos__photo {
+        margin: 0 10px;
+    }
 }
 
 @media screen and (max-width: 639px) {
-    
+   .contacts {
+        flex-direction: column;
+    }
 }
