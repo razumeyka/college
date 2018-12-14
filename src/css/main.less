@@ -78,10 +78,6 @@ footer {
     padding: 18px 0 14px;
 }
 
-.footer1 .wrapper {
-    height: 123px;
-}
-
 .footer1__copyright {
     font-size: 18px;
     margin-top: 20px;
@@ -139,11 +135,14 @@ footer {
     
     .footer1 .wrapper {
         flex-direction: column;
-        height: auto;
     }
     
-    .contacts__column {
-        margin: 15px 0;
+    .footer1__contacts {
+        margin-top: 20px;
+    }
+    
+    .footer1 .contacts__column {
+        margin: 10px 0;
     }
     
     .footer2 {
@@ -167,7 +166,7 @@ footer {
 }
 
 @media screen and (max-width: 639px) {
-   .contacts {
+    footer .contacts {
         flex-direction: column;
     }
 }

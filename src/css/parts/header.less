@@ -55,6 +55,7 @@ header {
     background: rgb(0, 0, 0);
     width: 2px;
     height: 100%;
+    min-height: 123px;
     margin: auto 35px;
 }
 
@@ -70,14 +71,13 @@ header {
 
 .header2 {
     background: #000000;
-    height: 60px;
-    position: relative;
 }
 
 .menu {
     display: block;
     margin: 0;
     padding: 0 0 0 225px;
+    height: 60px;
 }
 
 .menu li {
@@ -144,8 +144,10 @@ header {
     width: 40px;
     height: 42px;
     right: 15px;
-    top: 10px;
+    top: 76px;
     cursor: pointer;
+    border: 2px solid rgb(0,0,0);
+    border-radius: 3px;
 }
 
 .burger span, .burger span::before, .burger span::after {
@@ -154,7 +156,7 @@ header {
     border-radius: 5px;
     height: 3px;
     width: 30px;
-    background: rgb(255,255,255);
+    background: rgb(0,0,0);
     position: absolute;
     top: 10px;
     right: 5px;
@@ -178,22 +180,39 @@ header {
     
  .burger_active span::before  {
     transform: rotate(45deg);
-    top: 8px;
+    top: 10px;
 }
 
  .burger_active span::after  {
     transform: rotate(-45deg);
-    top: 8px;
+    top: 10px;
 } 
 
 
 @media screen and (max-width: 1279px) {
     .header1 .wrapper {
         flex-direction: column;
+        height: auto;
+    }
+    
+    .institute {
+        padding-left: 0;
+        flex-wrap: nowrap;
+    }
+    
+    .logo {
+        background: url(../images/logo-2.svg) no-repeat center;
+        position: static;
+        width: 200px;
+        height: 150px;
+    }
+    
+    .institute__name {
+        margin: auto 0 auto 20px;
     }
     
     header .contacts {
-        margin: 0 auto 15px;
+        margin: 20px auto 0;
     }
     
     header .burger {
@@ -202,8 +221,9 @@ header {
     
     header .menu {
         display: none;
+        height: auto;
         position: absolute;
-        top: 61px;
+        top: 334px;
         left: 0;
         margin: 0;
         width: 100%;
@@ -219,7 +239,7 @@ header {
     
     header .menu li a {
         display: block;
-        border-bottom: 1px solid rgb(255, 255, 255);
+        border-bottom: 1px solid #f5f5f5;
         padding: 15px;
     }
     
@@ -233,14 +253,35 @@ header {
     
     header .menu li .sub-menu {
         position: static;
-        background: rgb(255,255,255);
+        background: #f5f5f5;
     }
     
     header .sub-menu li {
-        border-bottom: 1px solid rgb(0, 0, 94);
+        border-bottom: 1px solid #3c8055;
     }
     
     header .sub-menu li a {
-        color: #3c8055;
+        color: rgb(0,0,0);
     }	
 }
+
+@media screen and (max-width: 639px) {
+    
+    .institute__name {
+        display: none;
+    }
+    
+    header .contacts__address {
+        display: none;
+    }
+    
+    .contacts__line {
+        display: none;
+    }
+    
+    header .menu {
+        top: 307px;
+    }
+}
+
+
