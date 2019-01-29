@@ -43,6 +43,11 @@
 
 .card__button {
     margin-top: 20px;
+    max-width: 240px;
+}
+
+.card__button:before{
+	background: url(../images/sprites.svg) no-repeat -279px -9px;
 }
 
 .card__icon {
@@ -59,9 +64,41 @@
 }
 
 
+@media screen and (max-width: 1279px) {
+
+	.wrapper_cards{
+		margin: 30px auto 10px;
+	}
+	
+	.cards {
+		margin: 0 -15px;
+	}
+	
+	.cards__card{
+		padding: 0 15px;
+	}
+
+}
+
 @media screen and (max-width: 639px) {
-    .card__icon {
+    
+	.card__caption{
+		font-size: 20px;
+	}
+	
+	.card__button{
+		padding: 13px 15px;
+		width: 100%;
+		max-width: none;
+	}
+	
+	.card__button::before{
+		display: none;
+	}
+	
+	.card__icon {
         display: none;
     }
+	
 }
 

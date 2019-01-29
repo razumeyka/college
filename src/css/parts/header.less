@@ -77,7 +77,7 @@ header {
 .menu {
     display: block;
     margin: 0;
-    padding: 0 0 0 225px;
+    padding: 0 0 0 210px;
     height: 60px;
 }
 
@@ -96,8 +96,8 @@ header {
     padding: 0 20px;
 }
 
-.menu>li:first-child a {
-    padding-left: 0;
+.menu a:hover{
+	background: #4b4b4b;
 }
 
 .sub-menu {
@@ -143,25 +143,23 @@ header {
     display: none;
     position: absolute;
     width: 40px;
-    height: 42px;
+    height: 40px;
     right: 15px;
-    top: 56px;
+    top: 35px;
     cursor: pointer;
-    border: 2px solid rgb(0,0,0);
-    border-radius: 3px;
+    border: 2px solid #000;
 }
 
 .burger span, .burger span::before, .burger span::after {
     display: block;
-    cursor: pointer;
-    border-radius: 5px;
+    cursor: pointer; 
     height: 3px;
     width: 30px;
-    background: rgb(0,0,0);
+    background: #000;
     position: absolute;
-    top: 10px;
+    top: 9px;
     right: 5px;
-    transition: all 200ms ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .burger span::before {
@@ -191,7 +189,16 @@ header {
 
 
 @media screen and (max-width: 1279px) {
-    .header1 .wrapper {
+	
+	header{
+		margin-bottom: 30px;
+	}
+	
+	.header1 { 
+		padding: 5px 0 15px;
+	}	
+
+   .header1 .wrapper {
         flex-direction: column;
         height: auto;
     }
@@ -203,35 +210,56 @@ header {
     
     .logo {
         background: url(../images/logo-2.svg) no-repeat center;
+		background-size: contain;
         position: static;
-        width: 150px;
-        height: 150px;
+        width: 110px;
+        height: 110px;
     }
     
     .institute__name {
         margin: auto 0 auto 20px;
+		font-size: 17px;
+		max-width: 240px;
     }
     
     header .contacts {
-        margin: 20px auto 0;
+		margin: 5px auto 0;
+		width: 100%;
+		justify-content: center;
+		background: #ededed; 
+		box-shadow: inset 0 0 5px #0000003b;
     }
+	
+	.contacts__column{
+		font-size: 14px;
+		max-width: 230px;
+	}
+	
+	.contacts__line { 
+		width: 1px; 
+		min-height: 100px; 
+	}
+	
+	.contacts__number{
+		font-size: 18px;
+	}
     
     header .burger {
         display: block;
     }
     
     header .menu {
-        display: none;
-        height: auto;
-        position: absolute;
-        top: 334px;
-        left: 0;
-        margin: 0;
-        width: 100%;
-        text-align: center;
-        background: #3c8055;
-        z-index: 1;
-        padding: 0;
+		display: none;
+		height: auto;
+		position: absolute;
+		top: 236px;
+		left: 0;
+		margin: 0;
+		width: 100%;
+		text-align: center;
+		background: #3c8055;
+		z-index: 1;
+		padding: 0;
     }
     
     header .menu li {
@@ -239,13 +267,15 @@ header {
     }
     
     header .menu li a {
-        display: block;
-        border-bottom: 1px solid #f5f5f5;
-        padding: 15px;
+		display: block;
+		border-bottom: 1px solid #24683d;
+		padding: 0 15px;
+		font-size: 13px;
+		line-height: 56px;
     }
     
-    header .menu>li:first-child a {
-        padding: 15px;
+    header .menu>li:first-child a { 
+		border-top: 1px solid #24683d;
     }
     
     header .menu li:hover .sub-menu {
@@ -255,11 +285,7 @@ header {
     header .menu li .sub-menu {
         position: static;
         background: #f5f5f5;
-    }
-    
-    header .sub-menu li {
-        border-bottom: 1px solid #3c8055;
-    }
+    } 
     
     header .sub-menu li a {
         color: rgb(0,0,0);
@@ -278,11 +304,15 @@ header {
     
     .contacts__line {
         display: none;
-    }
-    
-    header .menu {
-        top: 307px;
-    }
+    } 
+	
+	header .contacts{
+		padding: 12px 0;
+	}
+	
+	.logo{
+		margin: 0 auto;
+	}
 }
 
 

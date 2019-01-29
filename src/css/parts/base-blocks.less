@@ -51,15 +51,20 @@ button,input,select,textarea{
     font-size: 17px;
 }
 
+textarea, input[type="text"], input[type="button"], input[type="submit"] {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 h1,h2,h3,h4,h5 {
     margin: 0;
 }
 
 p {
-    font-size: 18px;
-    letter-spacing: 0.5px;
+    font-size: 17px;
+    letter-spacing: .5px;
     line-height: 1.5;
-    margin: 25px 0;
+    margin: 20px 0;
 }
 
 .wrapper {
@@ -87,33 +92,41 @@ p {
     outline: none;
     text-align: center;
     letter-spacing: 1.2px;
+	border: none;
+    outline: none;
 }
 
 .button_green {
-    background: rgba(0, 79, 53, 0);
-    border: 2px solid rgb(0, 128, 85);
-    font: 500 16px "Helvetica";
-    color: rgb(0, 78, 52);
+    background: #008055;
+    color: #fff;
+    font: 500 14px Helvetica;
     text-transform: uppercase;
-    padding: 19px 30px 17px;
+    padding: 20px 30px 19px;
+}
+
+.button_green:hover{
+    background: #006140;
 }
 
 .button_icon {
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    font: 500 16px "Helvetica";
-    color: rgb(0, 0, 0);
-    padding: 13px 20px 13px 55px;
+	border: 2px solid #000;
+    background-color: #fff;
+    font: 500 16px Helvetica;
+    color: #000;
+    padding: 13px 15px 13px 55px;
     position: relative;
-    max-width: 240px;
 }
 
 .button_icon::before {
-    content: "";
-    background: url(/images/sprites.svg) no-repeat -280px -7px;
-    width: 30px;
-    height: 30px;
+	content: "";
+    background: url(../images/sprites.svg) no-repeat -279px -9px;
+    width: 32px;
+    height: 32px;
     position: absolute;
     left: 10px;
-    top: 7px;
+    top: 5px;
+}
+
+.button_icon:hover{
+	background: #e6e6e6;
 }
